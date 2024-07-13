@@ -18,7 +18,7 @@ const morgan = require('morgan');
 // Importing route modules
 const indexRouter = require('./routes/indexRouter');
 const aboutRouter = require('./routes/aboutRouter');
-const caloriesRouter = require('./routes/caloriesRouter'); // Renamed for consistency
+const caloriesRouter = require('./routes/caloriesRouter'); 
 const usersRouter = require('./routes/usersRouter');
 const reportRouter = require('./routes/reportRouter');
 
@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serving static files
 app.use('/', indexRouter); // Mounting indexRouter at '/'
 app.use('/about', aboutRouter); // Mounting aboutRouter at '/about'
 app.use('/users', usersRouter); // Mounting usersRouter at '/users'
-app.use('/addcalories', caloriesRouter); // Mounting addCaloriesRouter at '/addcalories'
+app.use('/addcalories', caloriesRouter); // Mounting caloriesRouter at '/addcalories'
 app.use('/report', reportRouter); // Mounting reportRouter at '/report'
 
 // catch 404 and forward to error handler
